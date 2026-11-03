@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title> yafa|يافا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+  <a href="skin.html">الجمال</a>
+  <a href="health.html">الصحة</a>
+  <a href = "cooking.html">الطبخ</a>
+</nav>
+  </div>
+  </header>
+<h1 style="margin-top:40px; text-align:center;">
+ يافا | Yafa
+</h1>
+<img src ="yafaimg.png" alt ="insert" width ="150px">
+
+<p align = "Center"> <B>
+  كل ما يخص المرأه العصريه 
+ <br>
+ ثقافة..جمال .. صحه .. موضه </p> 
+</p>
+  <p> <blockquote>  
+مرحبًا بكِ في yafa|يافا ، المكان الذي يجمع بين الجمال والأناقة وكل ما يهم المرأه العصرية. 
+اكتشفي أحدث صيحات الموضة، نصائح العناية بالبشرة والشعر، وأفكارًا ملهمة تضيف لمسة مميزة إلى يومكِ بكل حب وتألق✨
+
+</blockquote>
+<Center>
+<br> <br>
+<button class="tip-btn" id="dailyTip">
+  💡 اضغطي لعرض نصيحة اليوم
+</button>
+
+<script>
+const tips = [
+  "اشربي ماء كثير يوميًا 🌸",
+  "نامي 8 ساعات لصحة أفضل ✨",
+  "اعتني ببشرتك يوميًا 💖",
+  "لا تنسي إزالة المكياج قبل النوم 🧴",
+  "استخدمي واقي الشمس ☀️"
+];
+
+let today = new Date().getDate();
+let index = today % tips.length;
+
+let tip = tips[index];
+
+let button = document.getElementById("dailyTip");
+
+button.onclick = function() {
+  // عرض النصيحة
+  button.innerText = tip;
+
+  // بعد دقيقة يرجع للنص الأصلي
+  setTimeout(function() {
+    button.innerText = "💡 نصيحة اليوم";
+  }, 60000); // 60000 = دقيقة كاملة
+};
+</script>
+</pr>
+</center>
+</body>
+</html>

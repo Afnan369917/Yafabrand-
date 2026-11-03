@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مكياج  </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+<button onclick="location.href='skin.html'">رجوع</button>
+<section class="hero">
+  <h2>أسرار المكياج 💄  </h2>
+  <p>
+    🌸 "لكل امرأة جمالها الخاص، والمكياج هو وسيلة لإبراز هذا الجمال بأسلوب أنيق وناعم. استمتعي باكتشاف أسرار الإطلالات الرائعة معنا."
+    </p>
+    <div class= "buttons">
+      <button onclick="showrecipe ('tools')">أدوات المكياج الأساسيه </button>
+      <button onclick = "showrecipe('steps')"> خطوات المكياج  </button>
+      <button onclick ="showrecipe('types')">أنواع المكياج</button>
+    </div>
+    <div id = "recipe"></div>
+    <script>
+  function showrecipe (recipe) {
+  if (recipe == "tools"){
+    document.getElementById ("recipe").innerHTML=` 
+<h2>أدوات المكياج الأساسية 💄</h2>
+
+<h3>🖌️ Makeup Brushes</h3>
+<img src ="brushes.png" alt ="insert" width ="100px">
+<p>فرش المكياج تستخدم لتطبيق كريم الأساس والبودرة والبلاشر وظلال العيون بشكل متناسق.</p>
+
+<h3>🧽 Beauty Blender</h3>
+<img src="blender.jpg" alt ="insert" width ="100px">
+<p>إسفنجة المكياج تساعد على توزيع كريم الأساس والكونسيلر بطريقة ناعمة وطبيعية.</p>
+
+<h3>🪞 Mirror</h3>
+<img src ="mirror.jpg" alt ="insert" width ="100px">
+<p>المرآة تساعد على تطبيق المكياج بدقة ومتابعة التفاصيل أثناء وضعه.</p>
+
+<h3>✂️ Eyelash Curler</h3>
+<img src ="eyelash.jpg" alt ="insert" width ="100px">
+<p>مكبس الرموش يستخدم لرفع الرموش وإعطائها مظهراً أطول قبل وضع الماسكارا.</p>
+
+<h3>🧴 Makeup Remover</h3>
+<img src =" remover.png" alt ="insert" width="100px">
+<p>مزيل المكياج يستخدم لتنظيف البشرة وإزالة آثار المكياج بعد الانتهاء من اليوم.</p>
+
+<h3>💄 Lip Brush</h3>
+<img src ="lip.png" alt="insert" width ="100px">
+<p>فرشاة أحمر الشفاه تساعد على توزيع الروج بدقة وتحديد الشفاه بشكل جميل.</p>
+
+<h3>✨ Powder Puff</h3>
+<img src ="powderpuff.png" alt =" insert" width ="100px">
+<p>إسفنجة البودرة تستخدم لتثبيت المكياج وتقليل لمعان البشرة.</p>
+`;
+  }
+  else if (recipe == "steps") {
+
+  document.getElementById("recipe").innerHTML = `
+    <h2>خطوات المكياج 💄</h2>
+<img src ="makeup.png" alt="insert" width ="150px">
+    <h3>1️⃣ Primer</h3>
+    <p>يوضع البرايمر أولاً لتنعيم البشرة ومساعدة المكياج على الثبات لفترة أطول.</p>
+
+    <h3>2️⃣ Foundation</h3>
+    <p>يتم توزيع كريم الأساس بالتساوي للحصول على لون بشرة موحد.</p>
+
+    <h3>3️⃣ Concealer</h3>
+    <p>يستخدم الكونسيلر لإخفاء الهالات السوداء والعيوب والبقع.</p>
+
+    <h3>4️⃣ Powder</h3>
+    <p>تساعد البودرة على تثبيت المكياج وتقليل لمعان البشرة.</p>
+
+    <h3>5️⃣ Blush</h3>
+    <p>يضيف البلاشر لوناً وحيوية للخدود.</p>
+
+    <h3>6️⃣ Eyeshadow</h3>
+    <p>يتم وضع ظلال العيون لإبراز جمال العينين وإضافة لمسة جمالية.</p>
+
+    <h3>7️⃣ Mascara</h3>
+    <p>تساعد الماسكارا على تكثيف الرموش وإظهارها بشكل أطول.</p>
+
+    <h3>8️⃣ Lipstick</h3>
+    <p>يتم وضع أحمر الشفاه كخطوة أخيرة لإكمال الإطلالة.</p>
+  `;
+}
+else if (recipe == "types") {
+
+  document.getElementById("recipe").innerHTML = `
+    <h2>أنواع المكياج 💄</h2>
+
+    <h3>🌸 Natural Makeup</h3>
+    <p>المكياج الطبيعي يعتمد على الألوان الهادئة ويبرز الجمال الطبيعي للبشرة.</p>
+
+    <h3>✨ Soft Makeup</h3>
+    <p>المكياج الناعم يستخدم ألواناً خفيفة ومناسبة للإطلالات اليومية.</p>
+
+    <h3>🌙 Evening Makeup</h3>
+    <p>مكياج السهرات يتميز بالألوان الواضحة واللمسات الجريئة للمناسبات الخاصة.</p>
+
+    <h3>👰 Bridal Makeup</h3>
+    <p>مكياج العروس مصمم ليبقى ثابتاً لساعات طويلة ويظهر بشكل جميل في الصور.</p>
+
+    <h3>🖤 Smokey Makeup</h3>
+    <p>المكياج السموكي يعتمد على الألوان الداكنة لإبراز جمال العيون.</p>
+
+    <h3>🌷 Korean Makeup</h3>
+    <p>المكياج الكوري يتميز بالبشرة المشرقة والألوان الطبيعية والناعمة.</p>
+  `;
+}
+  
+  }
+  </script>
+</section>
+</body>
