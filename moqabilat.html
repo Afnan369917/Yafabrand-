@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مقبلات</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffeef5;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #c94f7c;
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.hero p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  button {
+  background-color: #c94f7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap : 15px;
+}
+#recipe {
+
+  width: 80%;
+  max-width: 700px;
+  text-align: right;
+ background:white;
+ padding:20px;
+ border-radius:20px;
+ box-shadow:0 4px 10px rgba(0,0,0,0.1);
+ margin:30px auto;
+
+}
+</style>
+</head>
+<body>
+  <button onclick="location.href='cooking.html'">رجوع</button>
+  <section class="hero">
+    <h1> مقبلات 🥗</h1>
+    <p>
+      ابدأ سفرتك بأشهى المقبلات... نكهات خفيفة تفتح الشهية وتضيف لمسة مميزة لكل وجبة
+    </p>
+    <div class="buttons">
+      <button onclick="showRecipe('Caesar')">سلطة سيزر</button>
+      <button onclick="showRecipe('Coleslaw')" >كول سلو </button>
+      <button onclick ="showRecipe('Moutabal')"> متبل </button>
+    </div>
+    <div id ="recipe"></div>
+    <script>
+      function showRecipe(recipe){
+       if (recipe == "Coleslaw"){
+         document.getElementById("recipe").innerHTML =`
+      <h2> سلطة الكول سلو </h2>
+  <h3>المكونات</h3>
+  <ul>
+    <li>2 كوب ملفوف مفروم ناعم</li>
+    <li>1 كوب جزر مبشور</li>
+    <li>1/4 كوب مايونيز</li>
+    <li>2 ملعقة كبيرة لبن زبادي</li>
+    <li>1 ملعقة كبيرة خل</li>
+    <li>1 ملعقة صغيرة سكر</li>
+    <li>ملح وفلفل أسود حسب الرغبة</li>
+  </ul>
+
+  <h3>طريقة التحضير</h3>
+  <p>
+    اخلطي المايونيز واللبن والخل والسكر والملح والفلفل الأسود، ثم أضيفي الملفوف والجزر وقلبي جيدًا حتى تتغطى جميع المكونات. ضعي السلطة في الثلاجة لمدة 30 دقيقة قبل التقديم.
+  </p>
+   `;     
+       }
+      else if (recipe=="Caesar") {
+        document.getElementById("recipe").innerHTML =`
+  <h2>سلطة السيزر</h2>
+
+  <h3>المكونات</h3>
+  <ul>
+    <li>1 حبة خس روماني مقطع.</li>
+    <li>1 كوب خبز محمص (كروتون).</li>
+    <li>½ كوب جبنة بارميزان مبشورة.</li>
+    <li>1 صدر دجاج مشوي (اختياري).</li>
+    <li>¼ كوب صلصة السيزر.</li>
+    <li>رشة فلفل أسود.</li>
+  </ul>
+
+  <h3>طريقة التحضير</h3>
+  <p>
+    اغسلي الخس جيدًا وقطعيه، ثم ضعيه في وعاء التقديم. أضيفي الكروتون وجبنة البارميزان، ثم أضيفي الدجاج المشوي إذا رغبتِ بذلك. اسكبي صلصة السيزر فوق السلطة وقلبي المكونات برفق حتى تتوزع الصلصة بالتساوي، ثم قدميها مباشرة.
+  </p>
+`;
+      }
+      else if (recipe =="Moutabal"){
+        document.getElementById("recipe").innerHTML =`
+
+    <h2>متبل الباذنجان</h2>
+
+    <h3>المكونات</h3>
+    <ul>
+      <li>2 حبة باذنجان متوسطة.</li>
+      <li>2 ملعقة كبيرة طحينة.</li>
+      <li>2 فص ثوم مهروس.</li>
+      <li>عصير ليمونة.</li>
+      <li>2 ملعقة كبيرة لبن زبادي (اختياري).</li>
+      <li>ملح حسب الرغبة.</li>
+      <li>زيت زيتون للتزيين.</li>
+      <li>رمان أو بقدونس مفروم للتزيين (اختياري).</li>
+    </ul>
+
+    <h3>طريقة التحضير</h3>
+    <p>
+      اشوي الباذنجان حتى ينضج، ثم قشريه واهرسيه جيدًا. أضيفي الطحينة والثوم وعصير الليمون واللبن الزبادي والملح، ثم اخلطي المكونات حتى تتجانس. ضعي المتبل في طبق التقديم، وزينيه بزيت الزيتون والرمان أو البقدونس، ثم قدميه مع الخبز.
+    </p>
+  `;
+}  
+  
+      }
+</script>
+  </section>
+</body>
+</html>

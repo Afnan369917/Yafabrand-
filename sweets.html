@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>حلويات  </title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffeef5;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #c94f7c;
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.hero p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  button {
+  background-color: #c94f7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap : 15px;
+}
+#recipe {
+  margin-top:30px;
+  width: 80%;
+  max-width: 700px;
+  text-align: right;
+}
+</style>
+</head>
+<body>
+  <button onclick ="location.href='cooking.html'">رجوع</button>
+  <section class="hero">
+    <h1> حلويات 🍨 </h1>
+    <p>
+
+اصنعي السعادة بيديكِ، واستمتعي بأشهى وصفات الحلويات التي تناسب كل الأوقات والمناسبات
+    </p>
+    
+    <div class = "buttons">
+      <button onclick="showrecipe('laiali libnan')">ليالي لبنان</button>
+      <button onclick="showrecipe('lazy cake')">ليزي كيك</button>
+      <button onclick ="showrecipe('Pineapple')"> كيكة الأناناس الباردة
+      </button>
+    </div>
+    <div id = "recipe"></div>
+  </section>
+<script>
+  function showrecipe (recipe){
+    if (recipe == "laiali libnan")
+    document.getElementById ("recipe").innerHTML =` 
+  <h2>ليالي لبنان</h2>
+  <h3>المكونات:</h3>
+  <ul>
+    <li>4 أكواب حليب.</li>
+    <li>1 كوب سميد ناعم.</li>
+    <li>½ كوب سكر.</li>
+    <li>1 ملعقة صغيرة ماء زهر.</li>
+    <li>1 ملعقة صغيرة ماء ورد.</li>
+    <li>علبة قشطة.</li>
+    <li>فستق حلبي مجروش للتزيين.</li>
+    <li>قطر (شيرة) حسب الرغبة.</li>
+  </ul>
+
+  <h3>طريقة التحضير:</h3>
+  <ol>
+    <li>ضعي الحليب والسكر والسميد في قدر على نار متوسطة مع التحريك المستمر حتى يثخن الخليط.</li>
+    <li>أضيفي ماء الزهر وماء الورد ثم اسكبي الخليط في صينية واتركيه حتى يبرد.</li>
+    <li>وزعي القشطة فوق الطبقة الأولى بالتساوي.</li>
+    <li>ضعي الصينية في الثلاجة لمدة ساعتين على الأقل.</li>
+    <li>زيني بالفستق الحلبي واسكبي القطر عند التقديم.</li>
+  </ol>
+`;
+  
+else if (recipe =="lazy cake"){
+document.getElementById("recipe").innerHTML=`
+  <h2>ليزي كيك</h2>
+  <h3>المكونات</h3>
+  <ul>
+    <li>2 باكيت بسكويت شاي</li>
+    <li>2 كوب حليب</li>
+    <li>4 ملاعق كبيرة كاكاو</li>
+    <li>4 ملاعق كبيرة سكر</li>
+    <li>2 ملعقة كبيرة نشا</li>
+    <li>1 ملعقة صغيرة فانيلا</li>
+    <li>علبة قشطة (اختياري)</li>
+  </ul>
+
+  <h3>طريقة التحضير</h3>
+  <ol>
+    <li>اخلطي الحليب مع السكر والكاكاو والنشا والفانيلا.</li>
+    <li>ضعي الخليط على نار متوسطة مع التحريك حتى يصبح كثيفًا.</li>
+    <li>ارفعيه عن النار ثم أضيفي القشطة إذا رغبتِ بذلك وقلبي حتى تمتزج.</li>
+    <li>كسري البسكويت إلى قطع متوسطة.</li>
+    <li>أضيفي البسكويت إلى خليط الشوكولاتة وقلبي برفق.</li>
+    <li>اسكبي الخليط في قالب أو صينية مغطاة بورق الزبدة.</li>
+    <li>ضعيه في الثلاجة لمدة 4 ساعات أو حتى يتماسك.</li>
+    <li>قطعيه وقدميه باردًا.</li>
+  </ol>
+`; 
+}
+else if (recipe=="Pineapple"){
+document.getElementById("recipe").innerHTML =`
+  <h2>كيكة الأناناس الباردة</h2>
+  <h3>المكونات</h3>
+  <ul>
+    <li>1 عبوة كيك جاهز أو كيك فانيلا مخبوز</li>
+    <li>1 علبة أناناس شرائح</li>
+    <li>1 ظرف كريمة خفق</li>
+    <li>1 كوب حليب بارد</li>
+    <li>علبة قشطة</li>
+    <li>2 ملعقة كبيرة سكر (اختياري)</li>
+    <li>جوز هند للتزيين (اختياري)</li>
+  </ul>
+
+  <h3>طريقة التحضير</h3>
+  <ol>
+    <li>قطعي الكيك إلى مكعبات ورتبيها في صينية التقديم.</li>
+    <li>اسقي الكيك بقليل من عصير الأناناس.</li>
+    <li>اخفقي كريمة الخفق مع الحليب حتى تتماسك.</li>
+    <li>أضيفي القشطة واخلطي حتى يصبح الخليط ناعمًا.</li>
+    <li>وزعي شرائح الأناناس فوق الكيك.</li>
+    <li>اسكبي خليط الكريمة فوق الأناناس وساوي السطح.</li>
+    <li>زيني بجوز الهند أو قطع الأناناس حسب الرغبة.</li>
+    <li>ضعيها في الثلاجة لمدة 3 ساعات على الأقل ثم قدميها باردة.</li>
+  </ol>
+`; 
+}
+}
+</script>
+</body>
+</html>

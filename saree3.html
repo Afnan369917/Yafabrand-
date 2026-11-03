@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>وصفات سريعه </title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffeef5;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #c94f7c;
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.hero p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  button {
+  background-color: #c94f7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap : 15px;
+}
+#recipe {
+  margin-top:30px;
+  width: 80%;
+  max-width: 700px;
+  text-align: right;
+}
+</style>
+</head>
+<body>
+  <button onclick ="location.href='cooking.html'">رجوع</button>
+  <section class="hero">
+    <h1>وصفات سريعه 🍽️</h1>
+ <p>
+   وصفات سهلة ولذيذه تناسب أيامك المزدحمة،  
+حضري أشهى الأطباق بخطوات بسيطه وفي وقت قصير
+ </p>
+ 
+ <div class ="buttons">
+ <button onclick="showRecipe('futtuccine')"> فتوتشيني </button>
+ <button onclick="showRecipe('bolognese')">🍝 سباغيتي بولونيز</button>
+    <button onclick="showRecipe('pizza')">🍕 بيتزا</button>
+</div>
+<div id ="recipe"></div>
+    <script>
+function showRecipe(recipe) {
+  if (recipe =="futtuccine") {
+  document.getElementById("recipe").innerHTML = `
+    <h2>🍝 فيتوتشيني بالدجاج</h2>
+    <h3>المكونات</h3>
+    <ul>
+        <li>250 غرام معكرونة فيتوتشيني</li>
+        <li>صدر دجاج مقطع</li>
+        <li>كوب كريمة طبخ</li>
+        <li>نصف كوب حليب</li>
+        <li>ملعقة زبدة</li>
+        <li>فصا ثوم</li>
+        <li>ملح وفلفل أسود</li>
+        <li>جبنة بارميزان</li>
+    </ul>
+    <h3>طريقة التحضير</h3>
+    <ol>
+        <li>اسلقي المعكرونة ثم صفيها.</li>
+        <li>حمري الدجاج بالزبدة.</li>
+        <li>أضيفي الثوم ثم الكريمة والحليب.</li>
+        <li>أضيفي الجبنة حتى تذوب.</li>
+        <li>أضيفي المعكرونة وقلبي جيدًا.</li>
+        <li>قدميها ساخنة.</li>
+</ol>
+</div>
+`;
+}
+else if (recipe == "bolognese") {
+        document.getElementById("recipe").innerHTML = `
+<h2>🍝 سباغيتي بولونيز</h2>
+
+<h3>المكونات</h3>
+<ul>
+<li>250 غرام سباغيتي</li>
+<li>250 غرام لحم مفروم</li>
+<li>بصلة مفرومة</li>
+<li>فصان ثوم مهروسان</li>
+<li>2 ملعقة كبيرة معجون طماطم</li>
+<li>2 حبة طماطم مبشورة</li>
+<li>2 ملعقة كبيرة زيت زيتون</li>
+<li>ملح وفلفل أسود</li>
+<li>ملعقة صغيرة أوريغانو</li>
+<li>جبنة بارميزان للتقديم (اختياري)</li>
+</ul>
+
+<h3>طريقة التحضير</h3>
+<ol>
+<li>اسلقي السباغيتي حسب التعليمات الموجودة على العبوة.</li>
+<li>سخني الزيت ثم اقلي البصل حتى يذبل.</li>
+<li>أضيفي الثوم ثم اللحم المفروم وقلبي حتى ينضج.</li>
+<li>أضيفي معجون الطماطم والطماطم المبشورة والبهارات.</li>
+<li>اتركي الصلصة على نار هادئة لمدة 15 دقيقة.</li>
+<li>أضيفي السباغيتي إلى الصلصة وقلبي جيدًا.</li>
+<li>قدميها ساخنة مع جبنة البارميزان.</li>
+</ol>
+       `;
+    }
+    else if (recipe == "pizza") {
+        document.getElementById("recipe").innerHTML = `
+<h2>🍕 بيتزا منزلية</h2>
+
+<h3>المكونات</h3>
+<ul>
+<li>عجينة بيتزا جاهزة أو منزلية</li>
+<li>4 ملاعق كبيرة صلصة بيتزا</li>
+<li>2 كوب جبنة موزاريلا مبشورة</li>
+<li>شرائح فلفل أخضر</li>
+<li>شرائح فطر</li>
+<li>شرائح زيتون أسود</li>
+<li>شرائح بصل (اختياري)</li>
+<li>شرائح سلامي أو دجاج (حسب الرغبة)</li>
+<li>ملعقة صغيرة أوريغانو</li>
+</ul>
+
+<h3>طريقة التحضير</h3>
+<ol>
+<li>سخني الفرن على درجة حرارة 220° مئوية.</li>
+<li>افردي عجينة البيتزا في صينية الفرن.</li>
+<li>وزعي صلصة البيتزا على العجينة.</li>
+<li>أضيفي جبنة الموزاريلا بالتساوي.</li>
+<li>وزعي الفلفل والفطر والزيتون والبصل وباقي الإضافات.</li>
+<li>رشي الأوريغانو على الوجه.</li>
+<li>اخبزي البيتزا لمدة 15-20 دقيقة حتى تذوب الجبنة وتتحمر الأطراف.</li>
+<li>قدميها ساخنة واستمتعي بها.</li>
+</ol>
+`;
+    }
+}
+</script>
+  </section>
+</body>
+</html>

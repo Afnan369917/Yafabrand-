@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title> العناية بالبشرة </title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffeef5;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #c94f7c;
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.hero p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  button {
+  background-color: #c94f7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap : 15px;
+}
+
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px #ddd;
+}
+
+.card h3 {
+  color: #c94f7c;
+}
+
+.card p {
+  color: #555;
+}
+
+#recipe{
+ background:white;
+ padding:20px;
+ border-radius:20px;
+ box-shadow:0 4px 10px rgba(0,0,0,0.1);
+ margin:30px auto;
+}
+</style>
+</head>
+<body>
+<button onclick="location.href='skin.html'">رجوع</button>
+  <section class="hero">
+    <h2>العناية بالبشرة</h2>
+ <p>
+   🌸 "بشرتك هي سر جمالك... اكتشفي معنا أسرار العناية بالبشرة بخطوات بسيطة ونصائح فعّالة لتحافظي على نضارتها وإشراقتها كل يوم." ✨
+ </p>
+ <div class ="buttons">
+    <button onclick="showRecipe('anwaa3')">أنواع البشرة </button>
+
+    <button onclick="showRecipe('roten')"> روتين العناية اليومي </button>
+    <button onclick="showRecipe('mask')">ماسكات طبيعيه</button>
+    </div>
+    <div id = "recipe"></div>
+    <script>
+    function showRecipe(skin){
+   if (skin == "anwaa3") {
+  document.getElementById("recipe").innerHTML = `
+
+  <h2>أنواع البشرة</h2>
+
+  <h3>البشرة الدهنية</h3>
+  <p>
+  تتميز بإفراز الزيوت بشكل زائد، وقد تظهر فيها المسام الواسعة والحبوب. تحتاج إلى تنظيف وترطيب مناسبين.
+  </p>
+
+  <h3>البشرة الجافة</h3>
+  <p>
+  تكون قليلة الترطيب وقد تشعرين معها بالشد أو ظهور القشور. تحتاج إلى الترطيب المستمر والعناية اللطيفة.
+  </p>
+
+  <h3>البشرة المختلطة</h3>
+  <p>
+  تجمع بين البشرة الدهنية والجافة، حيث تكون منطقة الجبهة والأنف والذقن أكثر دهنية بينما تكون باقي المناطق جافة.
+  </p>
+
+  <h3>البشرة العادية</h3>
+  <p>
+  هي بشرة متوازنة لا تعاني من زيادة الدهون أو الجفاف، وتحتاج إلى روتين بسيط للحفاظ على صحتها.
+  </p>
+
+  <h3>البشرة الحساسة</h3>
+  <p>
+  تتأثر بسرعة بالمنتجات أو العوامل الخارجية وقد يظهر عليها الاحمرار أو التهيج، لذلك تحتاج إلى منتجات لطيفة.
+  </p>
+
+  `;
+}
+
+else if (skin == "roten"){
+  document.getElementById("recipe").innerHTML =`
+  <h2> روتين العناية بالبشرة اليومي </h2>
+  <h3>الصباح ☀️</h3>
+  <ol>
+    <li>اغسلي وجهك بغسول مناسب لنوع بشرتك.</li>
+    <li>استخدمي تونر (اختياري).</li>
+    <li>ضعي سيروم فيتامين C.</li>
+    <li>استخدمي مرطب مناسب.</li>
+    <li>ضعي واقي شمس بعامل حماية +SPF 30.</li>
+  </ol>
+
+  <h3>المساء 🌙</h3>
+  <ol>
+    <li>إزالة المكياج (إن وجد).</li>
+    <li>غسل الوجه جيدًا.</li>
+    <li>استخدام سيروم أو علاج للبشرة.</li>
+    <li>وضع كريم حول العين.</li>
+    <li>ترطيب البشرة بكريم ليلي.</li>
+  </ol>
+
+  <p>
+    ✨ الانتظام في الروتين اليومي هو سر الحصول على بشرة صحية ونضرة.
+  </p>
+  `;
+}
+else if (skin =="mask"){
+  document.getElementById("recipe").innerHTML =`
+   <div class="cards">
+
+  <div class="card">
+    <h3>ماسك العسل</h3>
+    <p>يرطب البشرة ويمنحها نعومة وإشراقة طبيعية.</p>
+    <button onclick="window.location.href='mask1.html'">
+      عرض الوصفة
+    </button>
+  </div>
+
+  <div class="card">
+
+    <h3>ماسك الشوفان</h3>
+    <p>ينظف البشرة بلطف ويهدئ الاحمرار والتهيج.</p>
+    <button onclick="window.location.href='mask2.html'">
+      عرض الوصفة
+    </button>
+  </div>
+
+  <div class="card">
+    
+    <h3>ماسك الزبادي</h3>
+    <p>يساعد على تفتيح البشرة ومنحها مظهراً نضراً.</p>
+    <button onclick="window.location.href='mask3.html'">
+      عرض الوصفة
+    </button>
+</div>
+</div>
+
+ 
+ 
+ `; 
+}
+}
+</script>
+  </section>
+</body>
+</html>
