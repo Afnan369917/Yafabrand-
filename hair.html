@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>العناية بالشعر  </title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffeef5;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #c94f7c;
+}
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
+}
+.hero p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.hero button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  button {
+  background-color: #c94f7c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap : 15px;
+}
+#recipe {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  color: #c94f7c;
+  width: 80%;
+  text-align: center;
+}
+
+#recipe h3 {
+  color: #c94f7c;
+}
+
+#recipe p {
+  color: #555;
+  line-height: 2;
+}
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px auto;
+  width: 80%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #c94f7c;
+}
+
+.card button {
+  margin-top: 10px;
+}
+
+</style>
+<
+<button onclick="location.href='skin.html'">رجوع</button>
+
+</head>
+<body>
+  <section class = "hero">
+<h2>العناية بالشعر</h2>    
+<p> 
+✨ "شعركِ هو تاج جمالكِ، واهتمامكِ به يمنحه القوة واللمعان والحيوية. اكتشفي معنا أفضل النصائح والوصفات الطبيعية وروتين العناية المناسب لتحافظي على شعر صحي وجميل كل يوم."
+</p>
+ <div class ="buttons">
+   <button onclick="showRecipe('routine')">روتين العنايه بالشعر اليومي </button>
+ <button  onclick="showRecipe('maskhair')">ماسكات الشعر الطبيعيه</button>
+ <button onclick="showRecipe('oil')">الزيوت المفيده للشعر </button>
+ </div>
+ <div id="recipe"></div>
+<script>
+function showRecipe(type) {
+
+  let content = "";
+
+  if (type == "routine") {
+    content = `
+      <h3>💆‍♀️ روتين العناية بالشعر اليومي</h3>
+      <p>
+      💧 اغسلي شعركِ بالشامبو المناسب لنوعه.<br>
+      ✨ استخدمي البلسم بعد كل غسلة.<br>
+      🌸 مشطي شعركِ بلطف لتجنب التقصف.<br>
+      🔥 استخدمي واقياً للحرارة قبل السشوار أو المكواة.
+      </p>
+    `;
+  }
+
+  else if (type == "maskhair") {
+    content = `
+      <h3>🌿 ماسكات الشعر الطبيعية</h3>
+   <div class="card">
+    <h3>ماسك الأفوكادو لترطيب الشعر</h3>
+    
+    <button onclick="window.location.href='hairmask1.html'">
+      عرض الوصفة
+    </button>
+  </div>
+
+  <div class="card">
+
+    <h3>ماسك العسل وزيت الزيتون للمعان</h3>
+ 
+    <button onclick="window.location.href='hairmask2.html'">
+      عرض الوصفة
+    </button>
+  </div>
+
+  <div class="card">
+    
+    <h3>ماسك الزبادي لتغذية الشعر</h3>
+   
+    <button onclick="window.location.href='hairmask3.html'">
+      عرض الوصفة
+    </button>
+</div>
+    `;
+}
+  else if (type == "oil") {
+    content = `
+      <h3>🧴 الزيوت المفيدة للشعر</h3>
+      <p>
+      🌰 زيت الأرغان للترطيب.<br>
+      🥥 زيت جوز الهند للتغذية.<br>
+      🌿 زيت الخروع للمساعدة على تكثيف الشعر.
+      </p>
+    `;
+  }
+document.getElementById("recipe").innerHTML = content;
+localStorage.setItem("lastSection", type);
+}
+
+window.onload = function () {
+  let lastSection = localStorage.getItem("lastSection");
+
+  if (lastSection) {
+    showRecipe(lastSection);
+  }
+};
+</script>
+
+  </section>
+</body>
+</html>
