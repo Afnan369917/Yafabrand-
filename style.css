@@ -185,3 +185,37 @@ button:hover {
 .article-card p {
   line-height: 1.8;
 }
+
+/* الفوتر - أسفل الصفحة */
+.site-footer {
+    background-color: #f8c8dc;
+    padding: 25px 15px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 2px solid #f3a6c8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 18px;
+}
+
+.footer-links a {
+    color: #8a3d60;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #d63384;
+}
+
+.site-footer p {
+    color: #8a3d60;
+    font-size: 14px;
+    margin: 8px 0;
+}
